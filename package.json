@@ -1,0 +1,19 @@
+{
+  "name": "iotvotingapp",
+  "version": "1.0.0",
+  "description": "voting app for the vAfternoon IOT presentation of october 26th 2018",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/martyca/ITQiotapp.git"
+  },
+  "author": "Martin Caarels",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martyca/ITQiotapp/issues"
+  },
+  "homepage": "https://github.com/martyca/ITQiotapp#readme"
+}

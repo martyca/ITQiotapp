@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ITQ iot voting app</title>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/index.js"></script>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div class="center">
+    Name: <input type="text" name="name" id="name">
+    <br>
+    <br>
+    Awesomeness level of presentation:
+    <br>
+    <input type="range" min="1" max="10" value="1" onchange="updateSlider(this.value)" id="slider">
+    <b id="result"></b>
+  </div>
+</body>
+</html>
