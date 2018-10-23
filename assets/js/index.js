@@ -3,5 +3,4 @@ function updateSlider(slideAmount) {
     if(!name){name = 'anonymous'}
     var voteResult = document.getElementById("result");
     voteResult.innerHTML = slideAmount
-    console.log(slideAmount, name);
 }
