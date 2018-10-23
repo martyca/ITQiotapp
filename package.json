@@ -19,6 +19,7 @@
   "homepage": "https://github.com/martyca/ITQiotapp#readme",
   "dependencies": {
     "aws-sdk": "^2.340.0",
+    "body-parser": "^1.18.3",
     "express": "^4.16.4"
   }
 }
