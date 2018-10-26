@@ -7,6 +7,8 @@ AWS.config.update({region: 'eu-central-1'});
 AWS.config.credentials = credentials;
 var credentials = new AWS.SharedIniFileCredentials({profile: 'itqiot'});
 ddb = new AWS.DynamoDB({apiVersion: '2012-10-08'});
+var docClient = new AWS.DynamoDB.DocumentClient();
+
 
 
 
@@ -18,6 +20,30 @@ app.get('/', (req, res) => {
   res.sendFile(
     path.join(__dirname, 'views/index.html')
   )
+})
+app.get('/count', (req, res) => {
+  console.log('api get recieved.');
+  var body = req.body
+  var params = {
+    TableName: 'iot',
+  }
+  docClient.scan(params, function(err, data) {
+    if (err) {
+      console.log("Error", err);
+      res.send("ddb update Error")
+    } else {
+      console.log("Success", data);
+      res.send(
+        '<meta http-equiv="refresh" content="5" />' +
+        '<H1 align="center">' +
+          '<font size="7">' +
+            'Voters: ' + data.Count +
+          '</font>' +
+        "</H1>"
+      )
+    }
+  })
+  console.log(req.body)
 })
 app.post('/api', (req, res) => {
   var body = req.body
